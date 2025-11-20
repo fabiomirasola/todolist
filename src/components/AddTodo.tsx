@@ -15,15 +15,21 @@ export const AddTodo = ({onAdd} : AddTodoProps) => {
   };
 
   return (
-    <>
+    <div className="add-todo-container">
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add a new todo"
+        className="todo-input"
       />
-      <button onClick={handleAdd}>Add Todo</button>
-    </>
+      <button 
+        onClick={handleAdd}
+        className="add-todo-button"
+      >
+        +
+      </button>
+    </div>
     
   );
 
